@@ -1,12 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { GAMES } from '../constants';
+import { GAMES } from '../constants.ts';
 
 const GamePlayer: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const game = GAMES.find(g => g.id === id);
@@ -26,7 +24,7 @@ const GamePlayer: React.FC = () => {
   }
 
   const toggleFullscreen = () => {
-    const iframe = document.getElementById('game-iframe');
+    const iframe = document.getElementById('game-iframe') as HTMLIFrameElement;
     if (iframe) {
       if (!document.fullscreenElement) {
         iframe.requestFullscreen().catch(err => {

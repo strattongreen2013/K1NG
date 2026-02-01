@@ -1,12 +1,11 @@
-
 import React, { useState, useMemo } from 'react';
-import { HashRouter, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
-import GameGrid from './components/GameGrid';
-import GamePlayer from './components/GamePlayer';
-import { GAMES } from './constants';
-import { Category } from './types';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar.tsx';
+import Sidebar from './components/Sidebar.tsx';
+import GameGrid from './components/GameGrid.tsx';
+import GamePlayer from './components/GamePlayer.tsx';
+import { GAMES } from './constants.ts';
+import { Category } from './types.ts';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');

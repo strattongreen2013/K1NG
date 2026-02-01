@@ -1,8 +1,7 @@
-
 import React from 'react';
-import { Category } from '../types';
-import { CATEGORIES } from '../constants';
-import { Link, useLocation } from 'react-router-dom';
+import { Category } from '../types.ts';
+import { CATEGORIES } from '../constants.ts';
+import { useLocation } from 'react-router-dom';
 
 interface SidebarProps {
   activeCategory: Category;
